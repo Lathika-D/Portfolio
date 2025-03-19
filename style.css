@@ -1,0 +1,596 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    background: #222;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    border-bottom: 2px solid #e74c3c;
+}
+
+/* Mobile Menu */
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    padding: 50px 20px;
+    display: flex; /* Aligns content in a row */
+    align-items: center; /* Vertically centers the content */
+}
+
+.hero img {
+    width: 300px;
+    height: 300px; /* Ensures a perfect circle */
+    border-radius: 50%; /* Creates a circular shape */
+    box-shadow: 0 0 15px rgba(202, 8, 180, 0.8);
+    margin-left: 50px; /* Adds space to the left */
+    margin-top: 50px; /* Adds space at the top */
+    margin-right: 10px; /* Space between image and text */
+}
+.hero-text {
+    max-width: 800px; /* Keeps text readable */
+    margin: 50px auto; /* Centers text block */
+    text-align: left; /* Ensures left alignment */
+    line-height: 1.8; /* Increases space between lines */
+    padding: 5px; /* Adds space around the text */
+}
+
+.hero-text h2 {
+    font-size: 32px; /* Increases heading size */
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+.hero-text p {
+    font-size: 18px; /* Sets paragraph font size */
+    text-indent: 80px; /* Adds space at the start of the first line */
+    line-height: 1.6; /* Improves readability */
+    padding: 5px 0; /* Adds space inside the paragraph */
+}
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: left;
+}
+
+/* Glass Card */
+.glass-card {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Space between image and text */
+    background: rgba(13, 200, 203, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(35, 184, 213, 0.37);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 10px;
+    width: 1000px;
+}
+
+/* Profile Photo (Image on the Left) */
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Text Content (Aligns Right) */
+.text-content {
+    flex-grow: 1;
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: greenyellow;
+    box-shadow: 0 0 0 2px greenyellow;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: greenyellow;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: #212121;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px greenyellow;
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  
+  
+/* About Section */
+.about {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
+}
+
+/* Category Boxes */
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.box {
+    background: #444;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+    width: 150px;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    background: #e74c3c;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-box {
+    background: #333;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+    background: #e74c3c;
+}
+
+.skill-box img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+/* Education Section */
+.edu {
+    padding: 50px 20px;
+    display: flex; /* Aligns content in a row */
+    justify-content: center; /* Centers the content horizontally */
+}
+
+.edu-box {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px auto;
+    width: 80%;
+    transition: transform 0.3s;
+    text-align: left; /* Ensures text is aligned to the left */
+}
+.edu-box1 {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    background: #e74c3c;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px auto;
+    width: 10%;
+    transition: transform 0.3s;
+    text-align: left; /* Ensures text is aligned to the left */
+}
+
+
+.edu-box .img1 {
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    margin-right: 20px; /* Adds space between image and text */
+}
+.edu-box .img2 {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 1000px; /* Adds space before the image */
+}
+
+
+/* Ensuring the text inside edu-box aligns properly */
+.edu-text1 {
+    flex: 1; /* Allows text to take up remaining space */
+    text-align: left; /* Aligns text to the left */
+    font-size: 18px; /* Adjusts font size for better readability */
+    color: #fff; /* Makes text visible on dark background */
+}
+.edu-text2 {
+    flex: 1; /* Allows text to take up remaining space */
+    text-align: left; /* Aligns text to the left */
+    padding-left: 100px; /* Adds space before the text */
+    margin-right: 10px; /* Adds space after the text before the image */
+    font-size: 18px; /* Adjusts font size for better readability */
+    color: #fff; /* Makes text visible on dark background */
+}
+.edu-box:hover {
+    transform: scale(1.05);
+    background: #e74c3c;
+}
+
+
+
+
+/* NCC Section */
+.ncc-container {
+    display: flex; /* Align items in a row */
+    align-items: center; /* Vertically align content */
+    justify-content: flex-start; /* Ensure content starts from the left */
+    gap: 20px; /* Adds spacing between the box and text */
+}
+
+.ncc-box {
+    background: #444;
+    padding: 1px;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px; /* Space on the left */
+}
+
+.ncc-box img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.ncc-box:hover {
+    transform: scale(1.05);
+    background: #e74c3c;
+}
+
+.ncc-text {
+    max-width: 1000px; /* Prevents text from stretching too wide */
+    text-align: left; /* Ensures text stays aligned to the left */
+    font-size: 20px; /* Increases the font size */
+    font-weight: bold; /* Makes the text bolder (optional) */
+    line-height: 1.6; /* Improves readability with better spacing */
+}
+
+
+
+/* Contact Section */
+.contact-section {
+    padding: 30px;
+    background: #222;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    background: #111;
+    padding: 15px;
+}
+
+footer img {
+    width: 30px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+}
+
+/* Light Mode */
+.light-mode {
+    background: white;
+    color: black;
+}
+
+.light-mode header {
+    background: #ddd;
+}
+
+.light-mode nav ul li a {
+    color: black;
+}
+
+.light-mode .box,
+.light-mode .skill-box,
+.light-mode .edu-box,
+.light-mode .project-box,
+.light-mode .ncc-box {
+    background: #f2f2f2;
+    color: black;
+}
+
+.light-mode .box:hover,
+.light-mode .skill-box:hover,
+.light-mode .edu-box:hover,
+.light-mode .project-box:hover,
+.light-mode .ncc-box:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background: #222;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .hero img {
+        width: 140px;
+    }
+
+    .about {
+        width: 90%;
+    }
+
+    .categories {
+        flex-direction: column;
+    }
+
+    .edu-box {
+        flex-direction: column;
+    }
+
+    .edu-box img {
+        margin-bottom: 10px;
+    }
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1f1f1f;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #ffcc00;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: #ffcc00;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Assignment Section */
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.assignment-box {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.assignment-box img {
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.assignment-text1, .assignment-text2 {
+    flex-grow: 1;
+}
+
+.assignment-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.assignment-box1 {
+    text-align: center;
+    margin: 30px;
+}
+
+.assignment-box1 a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.assignment-box1 a:hover, .assignment-box a:hover {
+    background-color: #ffcc55;
+    color: #000;
+}
